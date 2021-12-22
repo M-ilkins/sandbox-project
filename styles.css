@@ -19,12 +19,15 @@
 
 #main-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
 #sun {
+    display: flex;
+    align-items: flex-end;
     background-color: rgba(0, 0, 0);
     box-shadow: 0px 0px 50px 20px #8c43b1;
     border-radius: 50%;
@@ -34,5 +37,14 @@
     animation-duration: 2s;
     animation-iteration-count: 2;
     animation-direction: alternate;
+}
+
+#sun-shadow {
+    position: relative;
+    top: 15vh;
+    background-color: black;
+    width: 10vw;
+    height: 15%;
+    border-radius: 50%;
 }
 
