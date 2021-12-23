@@ -11,6 +11,20 @@
     }
 }
 
+@keyframes bringToLife {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 2.5%;
+    }
+}
+
+@keyframes shadowShrink{
+    from{width: 8vw;}
+    to{width: 10vw;}
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -26,17 +40,17 @@
 }
 
 #sun {
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: flex-end;
     background-color: rgba(0, 0, 0);
     box-shadow: 0px 0px 50px 20px #8c43b1;
     border-radius: 50%;
     height: 10vw;
     width: 10vw;
-    animation-name: shrinkExpand;
-    animation-duration: 2s;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
+    animation: bringToLife 3s linear 0s infinite alternate none,
+    shrinkExpand 2s linear 0s 2 alternate none;
 }
 
 #sun-shadow {
@@ -46,5 +60,6 @@
     width: 10vw;
     height: 15%;
     border-radius: 50%;
+    animation: shadowShrink 3s linear 0s infinite alternate none;
 }
 
