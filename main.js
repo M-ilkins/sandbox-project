@@ -1,0 +1,1 @@
+let floatingBall = document.getElementById('sun');
