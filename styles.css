@@ -47,6 +47,15 @@ emulating it seems to adjust to the correct width...
     }
 }
 
+@keyframes sunHover {
+    from{
+        bottom:0;
+    }
+    to{
+        bottom: 5%;
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -70,6 +79,10 @@ emulating it seems to adjust to the correct width...
     width: 10vw;
     animation: bringToLife 3s linear 0s infinite alternate none,
     shrinkExpand 2s linear 0s 2 alternate none;
+}
+
+#sun:hover {
+    animation: sunHover 80ms linear 0s infinite alternate none;
 }
 
 #sun-shadow {
